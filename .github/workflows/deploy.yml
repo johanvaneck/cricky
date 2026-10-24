@@ -1,0 +1,12 @@
+name: Deploy to Dokploy
+on:
+  push:
+    branches: [master]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Dokploy deployment
+        env:
+          DEPLOY_HOOK: ${{ secrets.DOKPLOY_DEPLOY_HOOK }}
+        run: curl --fail --show-error --silent --retry 5 --retry-delay 3 "$DEPLOY_HOOK"
