@@ -8,6 +8,7 @@ FROM node:22-alpine
 WORKDIR /app
 ENV NODE_ENV=production DATA_DIR=/data PORT=3000
 COPY --from=build /app /app
+COPY server.mjs ./server.mjs
 RUN mkdir -p /data && chown -R node:node /app /data
 USER node
 EXPOSE 3000
