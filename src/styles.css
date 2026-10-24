@@ -1,0 +1,2 @@
+@import "tailwindcss";
+.field{@apply block w-full rounded-xl border border-gray-200 p-3 mt-1 outline-none focus:border-yellow-500} .primary{@apply rounded-xl bg-[#d5a900] px-5 py-3 font-bold text-[#123d2b] hover:bg-yellow-400}.score{@apply rounded-2xl bg-white p-5 text-2xl font-black shadow hover:bg-yellow-100}.extra{@apply rounded-xl bg-[#e6eddf] p-4 font-bold hover:bg-[#d6e4cd]}

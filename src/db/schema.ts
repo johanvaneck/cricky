@@ -1,0 +1,3 @@
+import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
+export const matches = sqliteTable('matches', { id: integer('id').primaryKey({autoIncrement:true}), home: text('home').notNull(), away: text('away').notNull(), oversLimit: integer('overs_limit').notNull().default(20), status: text('status').notNull().default('live'), createdAt: integer('created_at').notNull() });
+export const balls = sqliteTable('balls', { id: integer('id').primaryKey({autoIncrement:true}), matchId: integer('match_id').notNull().references(()=>matches.id), runs: integer('runs').notNull(), legal: integer('legal').notNull(), wicket: integer('wicket').notNull().default(0), kind: text('kind').notNull().default('run'), createdAt: integer('created_at').notNull() });
