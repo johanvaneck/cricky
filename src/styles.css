@@ -1,2 +1,4 @@
 @import "tailwindcss";
 .field{@apply block w-full rounded-xl border border-gray-200 p-3 mt-1 outline-none focus:border-yellow-500} .primary{@apply rounded-xl bg-[#d5a900] px-5 py-3 font-bold text-[#123d2b] hover:bg-yellow-400}.score{@apply rounded-2xl bg-white p-5 text-2xl font-black shadow hover:bg-yellow-100}.extra{@apply rounded-xl bg-[#e6eddf] p-4 font-bold hover:bg-[#d6e4cd]}
+button{touch-action:manipulation; -webkit-tap-highlight-color:transparent}
+@media(max-width:640px){body{min-width:320px}.score{min-height:64px;padding:.75rem .5rem;font-size:1.25rem}.extra{min-height:56px;padding:.65rem .4rem;font-size:.82rem}header{gap:.75rem;align-items:center;font-size:.78rem}header>div{font-size:.72rem;letter-spacing:.08em}.min-h-screen>div{padding:1rem}.min-h-screen h1{font-size:2.65rem;line-height:1.05}.rounded-3xl{border-radius:1.25rem}.text-6xl{font-size:3.25rem;line-height:1}.grid{gap:.5rem}}
