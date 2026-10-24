@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: Trigger Dokploy deployment
         env:
-          DEPLOY_HOOK: ${{ secrets.DOKPLOY_DEPLOY_HOOK }}
-        run: curl --fail --show-error --silent --retry 5 --retry-delay 3 "$DEPLOY_HOOK"
+          DOKPLOY_API_KEY: ${{ secrets.DOKPLOY_API_KEY }}
+        run: curl --fail --show-error --silent --retry 5 --retry-delay 3 -H "x-api-key: $DOKPLOY_API_KEY" -H "Content-Type: application/json" -d '{"composeId":"XH-ieXdA-JVbEDzGY1QLP"}' https://dokployn.v3ck.com/api/compose.deploy
